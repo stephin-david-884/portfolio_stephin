@@ -1,0 +1,446 @@
+*{
+    margin: 0px;
+    padding: 0px;box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+.header{
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    gap: 5rem;
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 1;
+}
+.header a{
+    text-decoration: none;
+}
+.logo{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.nav-links{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 0rem;
+}
+li a{
+    color: white;
+    position: relative;
+    font-weight: 300;
+    text-decoration: none;
+}
+li a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 3px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgba(0,157,255,1), rgba(255,0,255,1));
+}
+li a:hover::before{
+    width: 100%;
+}
+.visit-btn{
+    padding: 0.8rem 1.5rem;
+    text-wrap: nowrap;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgba(0, 157, 255, 1), rgba(255, 0, 255, 1));
+}
+.visit-btn a{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+.visit-btn:hover{
+    transform: scale(1.03);
+    background: linear-gradient(to right, rgba(255, 0, 255, 1), rgba(0, 157, 255, 1));
+}
+#menu-icon{
+    font-size: 2rem;
+    display: none;
+}
+section{
+    min-height: 85vh;
+    padding: 8rem 12% 0rem 12%;
+    width: 100%;
+    position: relative;
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+.about-container img{
+    width: 30vw;
+    border-radius: 50%;
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.info-box h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.info-box h1{
+    font-size: 3rem;
+}
+.info-box span{
+    background: linear-gradient(to right, rgba(0, 157, 255, 1), rgba(255, 0, 255, 1));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
+}
+.btn-group{
+    display: flex;
+    gap: 1rem;
+}
+.btn-group a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn1{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+.btn1 a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn1:hover{
+    background-color: black;
+    color: white;
+}
+.socials{
+    display: flex;
+    gap: 1.5rem;
+}
+.socials i{
+    font-size: 2rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.socials i:hover{
+    transform: scale(1.1);
+}
+.socials a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.socials a:hover {
+    color: inherit; 
+}
+.section-title{
+    text-align: center;
+    font-size: 3rem;
+}
+.experience-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+/*.experience img{
+    width: 24vw;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}*/
+.grid-card{
+    border: 1px solid black;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    margin-top: 2.3rem;
+}
+.grid-card:hover{
+    transform: scale(1.02);
+    background-color: black;
+    color: white;
+}
+.grid-card i{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.grid-card span{
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: linear-gradient(to right, rgba(0, 157, 255, 1), rgba(255, 0, 255, 1));
+    background-clip: text;
+    color: transparent;
+}
+.grid-card h3{
+    font-size: 1.5rem;
+}
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}    
+.project-card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border: 1px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.project-card:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-10px)scale(1.02);
+
+}
+.project-card img{
+    width: 20vw;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+.project-card:hover .btn1{
+    border: 2px solid white;
+    color: white;
+}
+.project-card:hover .btn1:hover{
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+}
+.project-card h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.skill{
+    width: 50%;
+    border: 1px solid black;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.skill h3{
+    padding: 1.3rem;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.736);
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    
+}
+.skill ul{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+}
+.skill li{
+    padding: 1rem;
+    text-align: center;
+    
+    border-bottom: 1px solid black;
+}
+.my-skill-cont{
+    margin-top: 3rem;
+}
+.contact-container{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+}
+.contact-left-title hr{
+    border: none;
+    width: 8rem;
+    height: 0.25rem;
+    background-color: black;
+    border-radius: 1rem;
+
+}
+.contact-inputs{
+    width: 24rem;
+    height: 3rem;
+    outline: none;
+    padding-left: 1rem;
+    font-weight: 500;
+    border-radius: 3rem;
+}
+.contact-left textarea{
+    height: 5rem;
+    padding-top: 1rem;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    border: 1px solid black;
+}
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+footer{
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+footer ul a{
+    color: black;
+    font-weight: 600;
+}
+.copyright{
+    font-size: 300;
+    
+}
+
+@media  (max-width:1280px){
+    header{
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+    .about .about-container{
+        gap: 3rem;
+    }
+    .experience-info{
+        flex-direction: column;
+    }
+}
+
+@media  (max-width:768px){
+    .header{
+        gap: 1rem;
+        padding: 0.6rem 1rem;
+        width: 97%;
+    }
+    .header .logo{
+        font-size: 1.3rem;
+    }
+    .header .visit-btn{
+        display: none;
+    }
+    .nav-links{
+        gap: 1.5rem;
+    }
+    .about-container{
+        flex-direction: column;
+    }
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .experience-info img{
+        width: 40vw;
+    }
+    .contact-inputs{
+        width: 72vw;
+    }
+    .contact-right{
+        display: none;
+    }
+    .skill{
+        width: 100%;
+    }
+    .project-card img {
+        display: none;
+        
+    }
+}
+
+@media  (max-width:600px){
+    header #menu-icon{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.905);
+        border-radius: 3rem;
+        display: none;
+    }
+    .nav-links li{
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+    .nav-links.active{
+        display: block;
+    }
+    .header{
+        padding: 0.7rem 4rem;
+        gap: 8rem;
+    }
+    header .logo{
+        font-size: 1.15rem;
+    }
+    .about-container img{
+        width: 80vw;
+    }
+    footer ul{
+        gap: 1rem;
+    }
+}
+
